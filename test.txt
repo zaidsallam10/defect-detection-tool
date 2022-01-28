@@ -1,0 +1,14 @@
+Why we Scale?
+1. in order to put the values between specific two ranges
+
+Ex for scalling:
+- Function in python called StandardScaler
+
+ex:
+[100, 200, 300, 400, 500 ,600, 700] => range b/w element:  is = 100
+
+StandardScaler([100, 200, 300, 400, 500 ,600, 700] )
+=
+[0.1, 0.2, 0.3, 0.4]
+
+

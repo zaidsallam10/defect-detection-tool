@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 class DataCleaner:
 
 
-
+    # This function will be called automatically when you intantie the class
     def __init__(self):
         self.cm1=pd.read_csv("datasets/cm1.csv")
         self.kc1=pd.read_csv("datasets/kc1.csv")
