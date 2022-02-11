@@ -1,0 +1,5 @@
+numpy # For mathmatical and caluclation operations
+pandas # for reading and understanding files ex: .csv/excel/json..etc
+matplotlib # for data visualzation
+sklearn # for machine learning models and data preprocessing
+keras # for neural networking and deep learning training

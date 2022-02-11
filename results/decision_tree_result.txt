@@ -1,0 +1,14 @@
+
+Data: kc1
+splitting: testing=25% training 75%
+max_leaf
+algorithm: DT
+Accuracy: 0.821969696969697
+
+--------------
+
+Data: cm1
+splitting: testing=25% training 75%
+max_leaf
+algorithm: DT
+Accuracy: 0.912
