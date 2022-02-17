@@ -13,7 +13,7 @@ import pandas as pd
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
-dataset= pd.read_csv("datasets/kc1.csv")
+dataset= pd.read_csv("scalled_mc1.csv")
 y=dataset['defects']
 X=dataset.drop("defects", axis=1)
 
@@ -43,7 +43,7 @@ model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy']
 # Training 
 # epochs: loop over the training data to learn.
 # over fitting: The model can't learn anymore.
-model.fit(X, y, epochs=1000, batch_size=4)
+model.fit(X, y, epochs=300, batch_size=4)
 
 
 # Testing and get the accuracy

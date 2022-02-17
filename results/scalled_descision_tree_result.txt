@@ -1,0 +1,9 @@
+
+
+cm1: scalled set
+Accuracy: 0.821969696969697
+
+-------------------
+
+kc1: scalled set
+Accuracy: 0.8246445497630331
