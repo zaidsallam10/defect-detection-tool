@@ -1,14 +1,37 @@
-Why we Scale?
-1. in order to put the values between specific two ranges
+Results 
 
-Ex for scalling:
-- Function in python called StandardScaler
+## (( Decision Tree )):
 
-ex:
-[100, 200, 300, 400, 500 ,600, 700] => range b/w element:  is = 100
-
-StandardScaler([100, 200, 300, 400, 500 ,600, 700] )
-=
-[0.1, 0.2, 0.3, 0.4]
+cm1: 0.9
+scallled_cm1: 0.9264214046822743
 
 
+kc1: 0.8246445497630331
+scalled_kc1: 0.8451816745655608
+
+
+
+----------------------------------------------
+
+## (( Neural network )):
+
+
+cm1: 90.36
+scallled_cm1: 
+
+
+kc1: 
+scalled_kc1: 
+
+
+
+----------------------------------------------
+
+## (( Hyprid )):
+
+# cm1=> 0.94
+# scalled_cm1=> 0.96
+
+
+# kc1=>  0.83
+# scalled_kc1=> 0.87

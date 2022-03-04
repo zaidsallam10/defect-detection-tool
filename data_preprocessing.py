@@ -7,6 +7,7 @@ from unicodedata import name
 # 2. Data Splitting functions (70% for training 15% testing 15% validation)
 # 3. Machine learning algorthims (DT: Decision Tree)
 from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import MinMaxScaler
 
 
 
@@ -20,7 +21,8 @@ def checkColumnDataType(col):
 
 
 def scaleColumns(df, cols):
-    scaler = StandardScaler()
+    # scaler = StandardScaler()
+    scaler = MinMaxScaler()
     df[cols]=scaler.fit_transform(df[cols])
     return df
 

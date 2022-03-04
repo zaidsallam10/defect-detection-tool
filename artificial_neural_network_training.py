@@ -13,12 +13,13 @@ import pandas as pd
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
-dataset= pd.read_csv("scalled_mc1.csv")
+dataset= pd.read_csv("datasets/cm1.csv")
+# dataset= pd.read_csv("scalled_cm1_v2.csv")
 y=dataset['defects']
 X=dataset.drop("defects", axis=1)
 
 
-X_train, X_test, y_train, y_test = train_test_split(X, y,test_size=0.25, random_state=0)
+X_train, X_test, y_train, y_test = train_test_split(X, y,test_size=0.20, random_state=0)
 
 # print(X_train.shape)
 # print(y_train.shape)
@@ -48,4 +49,4 @@ model.fit(X, y, epochs=300, batch_size=4)
 
 # Testing and get the accuracy
 _, accuracy = model.evaluate(X, y)
-print('Accuracy: %.2f' % (accuracy*100))
+print('Accuracy:'+ (accuracy))

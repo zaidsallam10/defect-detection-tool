@@ -23,7 +23,7 @@ class Hyprid:
 
     def __init__(self,dataset):
         print("Welcome to hyprid DT-NN model")
-        self.dataset= pd.read_csv("datasets/cm1.csv")
+        self.dataset= pd.read_csv(dataset)
         self.THRESHOLD=0
         self.selected_features=[]
 
@@ -90,9 +90,19 @@ class Hyprid:
 
         # Testing and get the accuracy
         _, accuracy = model.evaluate(X_test, y_test)
-        print('Accuracy of neural netwrok: %.2f' % (accuracy*100))
+        print('Accuracy of neural netwrok: %.2f' % (accuracy))
 
 
 
-model=Hyprid("datasets/cm1.csv")
+
+
+
+model=Hyprid("scalled_kc1_v2.csv")
 model.decisionTree()
+
+# cm1=> 0.94
+# scalled_cm1=> 0.96
+
+
+# kc1=>  0.83
+# scalled_kc1=> 0.87

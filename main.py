@@ -22,6 +22,6 @@ c =DataCleaner()
 
 
 # this function will scale the numerical columns in the give dataset, and take it takes the exported new columns name
-scallingValues(c.getKc1(), c.getCols('kc1'), 'scalled_kc1.csv')
+scallingValues(c.getKc1(), c.getCols('kc1'), 'scalled_kc1_v2.csv')
 
-scallingValues(c.getCm1(),c.getCols('mc1'), 'scalled_mc1.csv')
+scallingValues(c.getCm1(),c.getCols('mc1'), 'scalled_cm1_v2.csv')
