@@ -16,12 +16,12 @@ scalled_kc1: 0.8451816745655608
 ## (( Neural network )):
 
 
-cm1: 90.36
-scallled_cm1: 
+cm1: 0.9016064405441284
+scallled_cm1: 0.9036144614219666
 
 
-kc1: 
-scalled_kc1: 
+kc1:  0.8468468189239502
+scalled_kc1: 0.8511142730712891
 
 
 

@@ -13,8 +13,8 @@ import pandas as pd
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
-dataset= pd.read_csv("datasets/cm1.csv")
-# dataset= pd.read_csv("scalled_cm1_v2.csv")
+# dataset= pd.read_csv("datasets/kc1.csv")
+dataset= pd.read_csv("scalled_kc1_v2.csv")
 y=dataset['defects']
 X=dataset.drop("defects", axis=1)
 
@@ -49,4 +49,5 @@ model.fit(X, y, epochs=300, batch_size=4)
 
 # Testing and get the accuracy
 _, accuracy = model.evaluate(X, y)
-print('Accuracy:'+ (accuracy))
+print("Accuracy:")
+print((accuracy))
