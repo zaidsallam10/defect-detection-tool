@@ -14,23 +14,24 @@ import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 # dataset= pd.read_csv("datasets/kc1.csv")
-dataset= pd.read_csv("scalled_kc1_v2.csv")
+dataset= pd.read_csv("datasets/kc1.csv")
 y=dataset['defects']
 X=dataset.drop("defects", axis=1)
 
 
-X_train, X_test, y_train, y_test = train_test_split(X, y,test_size=0.20, random_state=0)
+X_train, X_test, y_train, y_test = train_test_split(X, y,test_size=0.03, random_state=0)
 
 # print(X_train.shape)
 # print(y_train.shape)
 
 model = Sequential()
 # Input layer (input_dim=> number of features (X))
-model.add(Dense(12, input_dim=21, activation='relu'))
+model.add(Dense(21, input_dim=21, activation='relu'))
 # Hidden layer (Number of hiddern layers depend on the problem we're trying to solve)
-model.add(Dense(32, activation='relu'))
-model.add(Dense(16, activation='relu'))
-model.add(Dense(8, activation='relu'))
+model.add(Dense(64, activation='relu'))
+# model.add(Dense(32, activation='relu'))
+# model.add(Dense(16, activation='relu'))
+# model.add(Dense(8, activation='relu'))
 # Output layer
 # sigmoid: is a amathatical function used to give the final output (mainly used for binary classification 0/1 True/False)
 model.add(Dense(1, activation='sigmoid'))
@@ -44,10 +45,11 @@ model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy']
 # Training 
 # epochs: loop over the training data to learn.
 # over fitting: The model can't learn anymore.
-model.fit(X, y, epochs=300, batch_size=4)
+model.fit(X, y, epochs=1000, batch_size=4)
 
 
 # Testing and get the accuracy
 _, accuracy = model.evaluate(X, y)
 print("Accuracy:")
 print((accuracy))
+model.save('nn_model_1.h5') 

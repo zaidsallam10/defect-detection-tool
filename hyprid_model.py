@@ -35,7 +35,7 @@ class Hyprid:
         # the columns of the features
         X=self.dataset.drop("defects", axis=1)
         # we split the data into testing and training
-        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.20, random_state=0)
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.10, random_state=0)
         # For training
         clf = DecisionTreeClassifier(max_leaf_nodes=10, random_state=0)
         clf.fit(X_train, y_train)
@@ -59,14 +59,14 @@ class Hyprid:
         filtered_X=X[self.selected_features]
 
         # Training the neural network based on importance from decision tree
-        X_train, X_test, y_train, y_test = train_test_split(filtered_X, y,test_size=0.25, random_state=0)
+        X_train, X_test, y_train, y_test = train_test_split(X, y,test_size=0.25, random_state=0)
 
         # print(X_train.shape)
         # print(y_train.shape)
 
         model = Sequential()
         # Input layer (input_dim=> number of features (X))
-        model.add(Dense(256, input_dim=len(self.selected_features), activation='relu'))
+        model.add(Dense(256, input_dim=21, activation='relu'))
         # Hidden layer (Number of hiddern layers depend on the problem we're trying to solve)
         model.add(Dense(128, activation='relu'))
         model.add(Dense(64, activation='relu'))
@@ -92,12 +92,14 @@ class Hyprid:
         _, accuracy = model.evaluate(X_test, y_test)
         print('Accuracy of neural netwrok: %.2f' % (accuracy))
 
+        model.save('hyprid_model.h5')  # creates a HDF5 file 'my_model.h5'
 
 
 
 
 
-model=Hyprid("scalled_kc1_v2.csv")
+# model=Hyprid("scalled_kc1_v2.csv")
+model=Hyprid("datasets/cm1.csv")
 model.decisionTree()
 
 # cm1=> 0.94
